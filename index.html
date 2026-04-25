@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF2MEOW 🐾</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
+    <div class="paw paw1">🐾</div>
+    <div class="paw paw2">🐾</div>
+    <div class="paw paw3">🐾</div>
+
+    <div class="container">
+        <h1>PDF2MEOW</h1>
+        <p class="subtitle">Transform bureaucratic nonsense into feline-certified literature.</p>
+
+        <div class="upload-box" id="dropZone">
+            <div class="upload-icon">📄</div>
+            <p>Drag & Drop Your Innocent PDF</p>
+            <span>or click to select a victim</span>
+            <input type="file" id="pdfFile" accept="application/pdf" hidden>
+        </div>
+
+        <div class="controls">
+            <select id="catMode">
+                <option value="classic">🐈 Classic Meow</option>
+                <option value="angry">😾 Angry Cat</option>
+                <option value="cute">🐱 Cute Kitten</option>
+                <option value="ancient">🧙 Ancient Cat</option>
+            </select>
+
+            <button id="convertBtn">INITIATE MEOWIFICATION</button>
+        </div>
+
+        <div id="status">Awaiting document sacrifice...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
