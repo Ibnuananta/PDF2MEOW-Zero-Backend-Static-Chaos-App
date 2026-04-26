@@ -2,6 +2,14 @@ const dropZone = document.getElementById("dropZone");
 const pdfFileInput = document.getElementById("pdfFile");
 const convertBtn = document.getElementById("convertBtn");
 const statusBox = document.getElementById("status");
+const terminalBox = document.getElementById("terminalBox");
+const resultPopup = document.getElementById("resultPopup");
+const resultStats = document.getElementById("resultStats");
+
+function logTerminal(message){
+    terminalBox.innerHTML += "<br>> " + message;
+    terminalBox.scrollTop = terminalBox.scrollHeight;
+}
 
 let uploadedFile = null;
 
@@ -46,6 +54,8 @@ convertBtn.addEventListener("click", async () => {
     }
 
     statusBox.innerText = "Reading your deeply serious document...";
+    terminalBox.innerHTML = "> initiating feline protocol...";
+    logTerminal("extracting bureaucratic suffering...");
 
     const fileReader = new FileReader();
 
@@ -59,6 +69,8 @@ convertBtn.addEventListener("click", async () => {
 
         for (let i = 1; i <= pdf.numPages; i++) {
             statusBox.innerText = `Meowifying page ${i}/${pdf.numPages}...`;
+
+            logTerminal(`injecting feline intelligence into page ${i}...`);
 
             const page = await pdf.getPage(i);
             const textContent = await page.getTextContent();
