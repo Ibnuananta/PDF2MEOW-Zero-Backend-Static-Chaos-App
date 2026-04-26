@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF2MEOW 🐾</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
+    <div class="rainbow-trail"></div>
+    <div class="scanner-line"></div>
+
+<div class="paw paw1">🐾</div>
+<div class="paw paw2">🐾</div>
+<div class="paw paw3">🐾</div>
+<div class="paw paw4">🐾</div>
 
     <div class="bg-glow glow1"></div>
     <div class="bg-glow glow2"></div>
@@ -40,6 +50,14 @@
         </div>
 
         <div id="status">Awaiting document sacrifice...</div>
+        <div class="terminal-box" id="terminalBox">
+    > awaiting feline directives...
+</div>
+
+<div class="result-popup" id="resultPopup">
+    <h2>MEOWIFICATION COMPLETE</h2>
+    <p id="resultStats"></p>
+</div>
     </div>
 
     <script src="script.js"></script>
