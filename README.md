@@ -1,180 +1,259 @@
 <div align="center">
 
-# 🌈🐱 PDF2MEOW 🐾
-### *An unnecessarily overengineered browser machine for feline document corruption.*
+# 🐱 PDF2MEOW
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&pause=1000&color=FFFFFF&center=true&vCenter=true&width=700&lines=Uploading+serious+documents...;Injecting+feline+intelligence...;Destroying+bureaucratic+credibility...;Nearby+cats+are+pleased." />
-
-<br>
-
-<img src="https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif" width="240"/>
-
-<br><br>
-
-![](https://img.shields.io/github/stars/yourusername/PDF2MEOW?style=for-the-badge)
-![](https://img.shields.io/github/license/yourusername/PDF2MEOW?style=for-the-badge)
-![](https://img.shields.io/badge/CHAOS-OPERATIONAL-white?style=for-the-badge)
-![](https://img.shields.io/badge/USELESSNESS-ELITE-black?style=for-the-badge)
-![](https://img.shields.io/badge/NYAN%20CERTIFIED-TRUE-success?style=for-the-badge)
+### A zero-backend browser app that turns serious PDFs into cat-certified nonsense.
 
 <br>
 
-```txt
-██████╗ ██████╗ ███████╗██████╗ ███╗   ███╗███████╗ ██████╗ ██╗    ██╗
-██╔══██╗██╔══██╗██╔════╝██╔══██╗████╗ ████║██╔════╝██╔═══██╗██║    ██║
-██████╔╝██║  ██║█████╗  ██████╔╝██╔████╔██║█████╗  ██║   ██║██║ █╗ ██║
-██╔═══╝ ██║  ██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══╝  ██║   ██║██║███╗██║
-██║     ██████╔╝██║     ██║  ██║██║ ╚═╝ ██║███████╗╚██████╔╝╚███╔███╔╝
-╚═╝     ╚═════╝ ╚═╝     ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝ ╚═════╝  ╚══╝╚══╝
-```
+![GitHub repo size](https://img.shields.io/github/repo-size/Ibnuananta/PDF2MEOW-Zero-Backend-Static-Chaos-App?style=for-the-badge&color=ff5c7a)
+![GitHub stars](https://img.shields.io/github/stars/Ibnuananta/PDF2MEOW-Zero-Backend-Static-Chaos-App?style=for-the-badge&color=7c5cff)
+![Static App](https://img.shields.io/badge/STATIC-APP-ff5c7a?style=for-the-badge)
+![Zero Backend](https://img.shields.io/badge/ZERO-BACKEND-7c5cff?style=for-the-badge)
+![Cat Approved](https://img.shields.io/badge/CAT-APPROVED-2ecc71?style=for-the-badge)
 
-### ☁️ *where every PDF goes to meow.*
+<br>
+
+[![Open Project](https://img.shields.io/badge/Open%20Live%20App-FF5C7A?style=for-the-badge&logo=githubpages&logoColor=white)](https://ibnuananta.github.io/PDF2MEOW-Zero-Backend-Static-Chaos-App/)
+[![View Repository](https://img.shields.io/badge/View%20Repository-1F1F29?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ibnuananta/PDF2MEOW-Zero-Backend-Static-Chaos-App)
 
 </div>
 
 ---
 
-<img src="https://user-images.githubusercontent.com/74038190/212744275-2d5b0f3f-7df5-45c1-8d2d-b0d2c8c7d0c8.gif" width="100%">
+## ✨ Overview
+
+**PDF2MEOW** is a fun static web app that extracts text from a PDF, replaces the original words with chaotic cat language, and exports the result as a new PDF.
+
+It runs fully in the browser, with no server, no database, and no backend cost.
+
+The current UI has been redesigned into a softer **creator-support inspired interface**: rounded cards, warm pink/purple accents, clean upload flow, and mobile-friendly layout.
 
 ---
 
-## 🐾 WHAT IS PDF2MEOW?
-
-PDF2MEOW is a **zero-backend browser application** engineered with a deeply concerning amount of commitment for one singular purpose:
-
-> converting respectable PDF documents into unreadable but emotionally authentic cat language.
-
-Simply:
-
-- drag a PDF,
-- choose a cat temperament,
-- initiate meowification,
-- download your professionally ruined manuscript.
-
----
-
-## 🌈 LIVE MEOWIFICATION PIPELINE
+## 🧩 What It Does
 
 ```txt
-[ Innocent PDF ]
-      ↓
-[ Text Extraction Ritual ]
-      ↓
-[ Feline Semantic Collapse ]
-      ↓
-[ Bureaucratic Integrity Failure ]
-      ↓
-[ Download Catified PDF ]
+Upload PDF
+   ↓
+Extract text with PDF.js
+   ↓
+Convert words into cat language
+   ↓
+Generate new PDF with jsPDF
+   ↓
+Download meowified result
 ```
 
 ---
 
-## 😼 AVAILABLE CAT PERSONALITIES
+## 🐾 Features
 
-| Cat Mode | Behavioral Output |
-|----------|-------------------|
-| 🐈 Classic Meow | ordinary domestic nonsense |
-| 😾 Angry Cat | hostile administrative screaming |
-| 🐱 Cute Kitten | adorable linguistic corruption |
-| 🧙 Ancient Cat | cursed temple feline scripture |
+- Drag-and-drop PDF upload
+- Click-to-select PDF upload
+- Multiple cat language modes
+- Browser-only PDF text extraction
+- Browser-only PDF generation
+- No backend required
+- No database required
+- No API key required
+- Works well for GitHub Pages hosting
+- Soft creator-style redesign based on `design.md`
 
 ---
 
-## 📊 REALTIME FELINE SYSTEM METRICS
+## 😼 Cat Modes
 
-```txt
-Cat Linguistic Injection ................. 98.7%
-Document Professionalism Remaining ....... 01.3%
-Nearby Cats Satisfaction ................. MAXIMUM
-Software Engineering Justification ....... UNKNOWN
+| Mode | Description |
+|---|---|
+| 🐈 Classic Meow | Standard household meow chaos |
+| 😾 Angry Cat | Loud and hostile feline output |
+| 🐱 Cute Kitten | Soft, cute, tiny meow language |
+| 🧙 Ancient Cat | Mythical cursed-cat vocabulary |
+
+---
+
+## 🎨 Design Direction
+
+The redesign follows a friendly creator-platform style inspired by the planning in `design.md`.
+
+### Visual Keywords
+
+- Friendly
+- Clean
+- Soft rounded UI
+- Warm creator-support feeling
+- Bright CTA button
+- Mobile-first layout
+- Lightweight static experience
+
+### Main Palette
+
+```css
+--primary: #ff5c7a;
+--secondary: #7c5cff;
+--background: #fff7f9;
+--surface: #ffffff;
+--text: #1f1f29;
+--muted: #777789;
 ```
 
 ---
 
-## 🧠 WHY THIS PROJECT EXISTS
+## 🛠️ Tech Stack
 
-Because modern humanity has produced too many PDFs containing:
-
-- legal suffering,
-- accounting trauma,
-- academic despair,
-- administrative paperwork,
-
-and almost none of them say:
-
-> meow.
-
-This repository seeks to correct that historical mistake.
+| Part | Technology |
+|---|---|
+| Structure | HTML5 |
+| Styling | CSS3 |
+| Logic | Vanilla JavaScript |
+| PDF Reading | PDF.js |
+| PDF Export | jsPDF |
+| Hosting | GitHub Pages |
 
 ---
 
-## ⚙️ TECHNOLOGY STACK
+## 📁 Project Structure
 
 ```txt
-Frontend Interface      → HTML5 + CSS3
-Document Parsing        → PDF.js
-PDF Reconstruction      → jsPDF
-Language Intelligence   → highly unstable cat arrays
-Backend Infrastructure  → none
-Mental Stability        → none
+PDF2MEOW-Zero-Backend-Static-Chaos-App/
+├── index.html
+├── style.css
+├── script.js
+├── design.md
+└── README.md
 ```
 
 ---
 
-## 🚀 DEPLOYMENT
+## 🚀 Live Demo
 
-This project is fully static.
+Open the live app here:
 
-Enable GitHub Pages and unleash feline entropy:
+```txt
+https://ibnuananta.github.io/PDF2MEOW-Zero-Backend-Static-Chaos-App/
+```
+
+Repository:
+
+```txt
+https://github.com/Ibnuananta/PDF2MEOW-Zero-Backend-Static-Chaos-App
+```
+
+---
+
+## 🧪 Run Locally
+
+Clone the repository:
 
 ```bash
-https://yourusername.github.io/PDF2MEOW/
+git clone https://github.com/Ibnuananta/PDF2MEOW-Zero-Backend-Static-Chaos-App.git
 ```
 
----
-
-## 🖼️ INTERFACE PREVIEW
-
-<img width="100%" src="https://via.placeholder.com/1200x600?text=PDF2MEOW+DELUXE+NYAN+INTERFACE"/>
-
----
-
-## 🧪 LOCAL EXECUTION
+Move into the project folder:
 
 ```bash
-git clone https://github.com/yourusername/PDF2MEOW.git
-cd PDF2MEOW
+cd PDF2MEOW-Zero-Backend-Static-Chaos-App
 ```
 
-Open `index.html` and begin your descent.
+Open the app:
+
+```bash
+start index.html
+```
+
+Or simply double-click `index.html` in your file explorer.
 
 ---
 
-## ☁️ NYAN CAT COMPLIANCE CERTIFICATE
+## 🌐 Deploy on GitHub Pages
 
-```txt
-✓ browser based
-✓ zero server cost
-✓ privacy friendly
-✓ scientifically unnecessary
-✓ cat approved
-✓ existentially questionable
+1. Open the repository on GitHub
+2. Go to **Settings**
+3. Open **Pages**
+4. Under **Build and deployment**, choose:
+   - Source: `Deploy from a branch`
+   - Branch: `main`
+   - Folder: `/root`
+5. Save
+6. Open your generated GitHub Pages URL
+
+---
+
+## 🧠 How the Conversion Works
+
+The app reads the PDF in the browser using PDF.js, extracts text from each page, replaces each word with a randomized word from the selected cat vocabulary bank, then uses jsPDF to generate a new downloadable PDF.
+
+Example logic:
+
+```js
+function randomize(text, bank) {
+  return text
+    .split(/\s+/)
+    .map(() => bank[Math.floor(Math.random() * bank.length)])
+    .join(" ");
+}
 ```
 
 ---
 
-## 🌟 SUPPORT THE CHAOS
+## 🧭 Roadmap
 
-If this repository made you ask:
+Planned improvements:
 
-> "why would someone build this?"
+- Better PDF validation
+- Safer filename handling
+- Visible conversion result popup
+- Page count and word count stats
+- Dark/light theme toggle
+- Better mobile spacing
+- Preview before download
+- Custom cat vocabulary editor
+- Creator-support landing page experiment
 
-please consider giving it a star.
+---
 
-Because the cats are watching.
+## ⚠️ Notes
 
-<br>
+PDF2MEOW is a joke project, but the browser-only architecture makes it a useful lightweight experiment for:
 
-<img src="https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif" width="220"/>
+- Static web apps
+- Client-side PDF processing
+- GitHub Pages deployment
+- Fun UI experiments
+- Zero-cost web projects
+
+Do not upload sensitive documents unless you understand how the browser-side processing works. The current app does not intentionally send files to a server, but users should still be careful with private documents.
+
+---
+
+## 🤝 Contributing
+
+Ideas, forks, and chaotic cat improvements are welcome.
+
+Suggested contribution areas:
+
+- UI polish
+- Accessibility improvements
+- Better PDF formatting
+- More cat modes
+- Cleaner mobile layout
+- Error handling
+
+---
+
+## 📜 License
+
+This project is open for learning, remixing, and experimentation.
+
+Add a formal license file if you plan to make reuse permissions explicit.
+
+---
+
+<div align="center">
+
+### Made for serious documents that secretly wanted to say meow.
+
+🐾
 
 </div>
