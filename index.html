@@ -3,62 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF2MEOW 🐾</title>
+    <title>PDF2MEOW — AI Document Agent</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-    <div class="rainbow-trail"></div>
-    <div class="scanner-line"></div>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+    <div class="grid-overlay"></div>
 
-<div class="paw paw1">🐾</div>
-<div class="paw paw2">🐾</div>
-<div class="paw paw3">🐾</div>
-<div class="paw paw4">🐾</div>
+    <main class="app-shell">
+        <aside class="sidebar panel">
+            <div class="brand">
+                <div class="brand-mark">AI</div>
+                <div>
+                    <strong>PDF2MEOW</strong>
+                    <span>Document Agent</span>
+                </div>
+            </div>
 
-    <div class="bg-glow glow1"></div>
-    <div class="bg-glow glow2"></div>
-    <div class="paw paw1">🐾</div>
-    <div class="paw paw2">🐾</div>
-    <div class="paw paw3">🐾</div>
+            <nav class="side-nav" aria-label="Workspace navigation">
+                <a class="active" href="#">New Task</a>
+                <a href="#workspace">Workspace</a>
+                <a href="#terminalBox">Shell</a>
+                <a href="#resultPopup">Review</a>
+            </nav>
 
-    <div class="container">
-        <h1>PDF2MEOW</h1>
-        <p class="subtitle">Transform bureaucratic nonsense into feline-certified literature.</p>
+            <div class="sidebar-card">
+                <span class="eyebrow">Current Repo</span>
+                <p>Zero-backend static PDF converter</p>
+            </div>
+        </aside>
 
-        <div class="upload-box" id="dropZone">
-            <div class="upload-icon">📄</div>
-            <p>Drag & Drop Your Innocent PDF</p>
-            <span>or click to select a victim</span>
-            <input type="file" id="pdfFile" accept="application/pdf" hidden>
-        </div>
+        <section class="workspace">
+            <header class="topbar panel">
+                <div>
+                    <span class="eyebrow">Engineering Session</span>
+                    <h1>Transform PDF text with an AI-style document workflow.</h1>
+                </div>
+                <span class="status-badge">Ready</span>
+            </header>
 
-        <div class="controls">
-            <select id="catMode">
-                <option value="classic">🐈 Classic Meow</option>
-                <option value="angry">😾 Angry Cat</option>
-                <option value="cute">🐱 Cute Kitten</option>
-                <option value="ancient">🧙 Ancient Cat</option>
-            </select>
+            <section class="hero-grid" id="workspace">
+                <div class="main-panel panel">
+                    <div class="section-heading">
+                        <span class="eyebrow">Task Intake</span>
+                        <h2>Start a document conversion run</h2>
+                        <p>Upload a PDF, choose a translation mode, then run the local browser-based conversion pipeline.</p>
+                    </div>
 
-            <button id="convertBtn">INITIATE MEOWIFICATION</button>
-        </div>
+                    <div class="prompt-box" id="dropZone">
+                        <div class="upload-icon">PDF</div>
+                        <div>
+                            <p>Drop your PDF here</p>
+                            <span>or click to attach a file to this agent session</span>
+                        </div>
+                        <input type="file" id="pdfFile" accept="application/pdf" hidden>
+                    </div>
 
-        <div id="status">Awaiting document sacrifice...</div>
-        <div class="terminal-box" id="terminalBox">
-    > awaiting feline directives...
-</div>
+                    <div class="controls">
+                        <label class="field">
+                            <span>Agent Mode</span>
+                            <select id="catMode">
+                                <option value="classic">Classic Meow</option>
+                                <option value="angry">Angry Cat</option>
+                                <option value="cute">Cute Kitten</option>
+                                <option value="ancient">Ancient Cat</option>
+                            </select>
+                        </label>
 
-<div class="result-popup" id="resultPopup">
-    <h2>MEOWIFICATION COMPLETE</h2>
-    <p id="resultStats"></p>
-</div>
-    </div>
+                        <button id="convertBtn">Run Conversion</button>
+                    </div>
+
+                    <div class="status-card">
+                        <span class="eyebrow">Run Status</span>
+                        <div id="status">Waiting for a PDF attachment.</div>
+                    </div>
+                </div>
+
+                <aside class="tool-panel panel">
+                    <div class="panel-tabs">
+                        <span class="active">Plan</span>
+                        <span>Tests</span>
+                        <span>Review</span>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item done">
+                            <span></span>
+                            <div>
+                                <strong>Read design.md</strong>
+                                <p>Dark AI-engineering workspace style loaded.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <span></span>
+                            <div>
+                                <strong>Attach PDF</strong>
+                                <p>Waiting for user document input.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span></span>
+                            <div>
+                                <strong>Extract text</strong>
+                                <p>PDF.js reads pages locally in the browser.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span></span>
+                            <div>
+                                <strong>Generate output</strong>
+                                <p>jsPDF writes the converted document.</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="bottom-grid">
+                <div class="terminal-panel panel">
+                    <div class="terminal-header">
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <strong>shell / conversion-log</strong>
+                    </div>
+                    <div class="terminal-box" id="terminalBox">&gt; awaiting document-agent directives...</div>
+                </div>
+
+                <div class="review-panel panel result-popup" id="resultPopup">
+                    <span class="eyebrow">Review Summary</span>
+                    <h2>Conversion Complete</h2>
+                    <p id="resultStats">Output generated and downloaded locally.</p>
+                </div>
+            </section>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
