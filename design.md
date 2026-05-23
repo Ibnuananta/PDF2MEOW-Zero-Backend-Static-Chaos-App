@@ -1,771 +1,695 @@
-# DESIGN.md — Creator Support Website Blueprint
+# DESIGN.md — Devin-Inspired AI Engineering Workspace
 
-> Goal: Build your own creator-support website inspired by the concept of Ko-fi, but with your own branding, layout, copy, colors, and features. Do not copy Ko-fi’s logo, text, exact layout, or visual identity.
+> Goal: Create a polished AI software-engineering workspace inspired by the product direction of Devin.ai: task delegation, autonomous coding sessions, developer tools, testing, review, and shipping. Do not copy Devin branding, logo, exact copy, screenshots, layout, or visual identity.
 
 ---
 
 ## 1. Product Concept
 
-Create a simple creator-support website where creators can receive support from their audience through:
+Build a focused AI engineering interface where users can ask an AI agent to plan, code, test, review, and ship software tasks.
 
-- One-time donations
-- Membership tiers
-- Digital product sales
-- Commission/service requests
-- Creator posts/updates
-- Simple public profile page
+The product should feel like a calm developer command center, not a generic chatbot.
 
-The site should feel friendly, fast, clean, mobile-first, and easy to use.
+Core experience:
 
-Example project names:
-
-- CreatorNest
-- TipJar
-- FanFuel
-- SupportHub
-- CreatoPay
-- MeowFund
+- User writes an engineering task.
+- Agent creates a plan.
+- Agent works through steps.
+- User watches progress through timeline, code, shell, and preview panels.
+- Final output includes files changed, tests run, risks, and next steps.
 
 ---
 
-## 2. Main User Types
+## 2. Design Personality
 
-### Creator
+Keywords:
 
-A creator can:
+- AI software engineer
+- Dark professional workspace
+- Calm command center
+- Developer-first
+- Precise
+- Minimal
+- Trustworthy
+- Technical
+- Agentic workflow
+- Enterprise-ready
 
-- Create a public profile
-- Add avatar, banner, bio, and links
-- Receive one-time support
-- Create membership tiers
-- Sell digital products
-- Offer commissions/services
-- Post updates
-- View supporter activity
-
-### Supporter
-
-A supporter can:
-
-- Visit a creator page
-- Send a tip
-- Join a membership
-- Buy digital products
-- Request commissions
-- Leave a support message
+Design should feel advanced but not noisy. Avoid cyberpunk excess, flashy neon, or playful chatbot styling.
 
 ---
 
-## 3. Main Pages
+## 3. Main Screens
 
-## Landing Page
+### Landing Page
 
-Purpose: Explain the platform and invite creators to start.
+Purpose: explain the product and invite the user to start a task.
 
-Recommended sections:
+Sections:
 
 1. Navbar
-2. Hero section
-3. Feature cards
-4. Creator profile preview
-5. Pricing/fee explanation
-6. Testimonials
-7. Final call-to-action
+2. Hero with strong headline
+3. Large task prompt box
+4. Use-case cards
+5. Workspace preview
+6. Workflow section
+7. Integrations section
+8. Trust / verification section
+9. Final CTA
 
-Hero copy example:
+Hero copy style:
 
 ```txt
-Fund your creative work without the complexity.
-Create a beautiful page where fans can tip, subscribe, shop, and support your work.
+Delegate engineering work to an AI agent that plans, codes, tests, and ships.
 ```
 
-CTA buttons:
+CTA examples:
 
 ```txt
-Start Your Page
-Explore Creators
-```
-
----
-
-## Creator Profile Page
-
-This is the most important page.
-
-Layout:
-
-```txt
-[BANNER IMAGE]
-
-[AVATAR]
-Creator Name
-@username
-Short creator bio
-
-[Support Button] [Membership] [Shop] [Commissions]
-
-Tabs:
-Home | Posts | Membership | Shop | Commissions | About
-```
-
-Important elements:
-
-- Creator banner
-- Creator avatar
-- Name and username
-- Short bio
-- Social links
-- Support button
-- Donation box
-- Membership cards
-- Digital shop cards
-- Recent posts
-- Supporter messages
-
-Donation box example:
-
-```txt
-Support Ibnu
-
-Amount:
-[$3] [$5] [$10] [Custom]
-
-Message:
-Leave a note...
-
-[Support Now]
+Start a Task
+View Workflow
+Open Workspace
 ```
 
 ---
 
-## Membership Page
+### Agent Workspace
 
-Membership allows fans to support monthly.
-
-Tier card structure:
+Main app layout:
 
 ```txt
-Tier Name
-$5 / month
-
-Short description
-
-Benefits:
-- Exclusive posts
-- Behind-the-scenes updates
-- Early access
-- Supporter badge
-
-[Join Tier]
+┌──────────────────────────────────────────────────────┐
+│ Topbar: Project / Repo / Status / Share / Settings   │
+├──────────────┬───────────────────────┬───────────────┤
+│ Sidebar      │ Main Conversation     │ Tool Panel    │
+│              │                       │               │
+│ New Task     │ User request          │ IDE           │
+│ Sessions     │ Agent plan            │ Shell         │
+│ PRs          │ Progress timeline     │ Browser       │
+│ Docs         │ Completion summary    │ Tests         │
+└──────────────┴───────────────────────┴───────────────┘
 ```
 
-Example tiers:
+Required elements:
 
-### Tiny Supporter
-
-- $3/month
-- Supporter badge
-- Public thank-you
-
-### Real Fan
-
-- $7/month
-- Exclusive posts
-- Downloadable content
-- Monthly updates
-
-### Inner Circle
-
-- $15/month
-- All previous benefits
-- Early access
-- Private community link
+- Current task title
+- Repository indicator
+- Status badge
+- Agent plan card
+- Step-by-step progress timeline
+- Tool activity feed
+- Code panel
+- Terminal panel
+- Browser/preview panel
+- Test result summary
+- Final PR or delivery summary
 
 ---
 
-## Shop Page
+### Task Intake Screen
 
-For selling digital products.
+Fields:
 
-Product card structure:
+- Task title
+- Repository/project
+- Main instruction
+- Success criteria
+- Files or areas to inspect
+- Constraints
+- Testing requirements
+- Preferred output: PR, patch, documentation, prototype, or explanation
 
-```txt
-[Product Image]
-Product Name
-Short description
-Price
-[Buy Now]
-```
+Task templates:
 
-Product examples:
+- Fix a bug
+- Build a feature
+- Refactor code
+- Write tests
+- Review a PR
+- Create documentation
+- Investigate an issue
+- Perform visual QA
 
-- PDF templates
-- Notion templates
-- E-books
-- Digital art
-- AI prompt packs
-- Code snippets
-- Design assets
-
----
-
-## Commissions Page
-
-For custom paid work.
-
-Commission card structure:
+Prompt placeholder:
 
 ```txt
-Service Name
-Starting price
-Delivery time
-Short description
-[Request Commission]
-```
-
-Request form fields:
-
-- Name
-- Email
-- Project description
-- Budget
-- Deadline
-- Attachment upload, optional
-
-Example services:
-
-- Logo design
-- Website design
-- AI automation setup
-- Video editing
-- Writing service
-- Custom illustration
-
----
-
-## Creator Dashboard
-
-Dashboard sections:
-
-- Overview
-- Earnings
-- Supporters
-- Posts
-- Memberships
-- Shop
-- Commissions
-- Profile settings
-- Payment settings
-
-Dashboard cards:
-
-```txt
-Total Earnings
-Monthly Supporters
-Products Sold
-Pending Commissions
-New Messages
+Ask the agent to fix a bug, build a feature, write tests, or review a PR...
 ```
 
 ---
 
-## 4. Visual Design Direction
+### PR Review Screen
 
-Style keywords:
+Purpose: help users review agent work quickly.
 
-- Friendly
-- Clean
-- Soft
-- Creator-focused
-- Rounded
-- Mobile-first
-- Fast
-- Modern
-
-Recommended light palette:
+Structure:
 
 ```txt
-Primary: #FF5C7A
-Secondary: #7C5CFF
-Background: #FFF7F9
-Surface: #FFFFFF
-Text: #1F1F29
-Muted Text: #777789
-Border: #F0DDE4
-Success: #2ECC71
-Warning: #FFB020
+PR Summary
+- What changed
+- Why it changed
+- Files touched
+- Tests run
+- Risk level
+- Follow-up notes
+
+[View Diff] [Run Tests] [Request Changes] [Approve]
 ```
 
-Recommended dark palette:
+Include:
+
+- Diff summary
+- Files changed
+- CI/test status
+- Visual QA notes
+- Risk warnings
+- Rollback notes
+
+---
+
+### Documentation / Knowledge Screen
+
+Purpose: store project rules and reusable instructions.
+
+Sections:
+
+- Project overview
+- Repo conventions
+- Coding style
+- Design rules
+- Testing commands
+- Deployment process
+- Known issues
+- Agent instructions
+- Do-not-touch areas
+
+Knowledge card example:
 
 ```txt
-Primary: #FF6B9A
-Secondary: #8B5CF6
-Background: #0F0F16
-Surface: #181824
-Text: #FFFFFF
-Muted Text: #A5A5B5
-Border: #2A2A3A
+When working on the frontend:
+- Use existing components first.
+- Follow design.md.
+- Run tests before final summary.
 ```
 
-Fonts:
+---
 
-```txt
-Heading: Poppins / Plus Jakarta Sans / Inter
-Body: Inter / Nunito / System UI
-Accent: JetBrains Mono
-```
+## 4. Visual Design System
 
-Border radius:
+Dark-first, technical, clean, and professional.
+
+### CSS Tokens
 
 ```css
---radius-sm: 10px;
---radius-md: 16px;
---radius-lg: 24px;
---radius-xl: 32px;
+:root {
+  --color-bg: #07090f;
+  --color-bg-soft: #0b0f18;
+  --color-surface: #101521;
+  --color-surface-soft: #151b2a;
+  --color-surface-raised: #1a2233;
+
+  --color-border: #263246;
+  --color-border-soft: rgba(255, 255, 255, 0.08);
+
+  --color-text: #f5f7fb;
+  --color-text-muted: #aab4c5;
+  --color-text-soft: #6f7b8f;
+
+  --color-primary: #7c9cff;
+  --color-primary-soft: #9db4ff;
+  --color-primary-glow: rgba(124, 156, 255, 0.28);
+
+  --color-success: #39d98a;
+  --color-warning: #ffd166;
+  --color-danger: #ff6b6b;
+  --color-purple: #b794f4;
+
+  --color-code-bg: #05070d;
+  --color-terminal-bg: #03050a;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.22);
+  --shadow-md: 0 20px 70px rgba(0, 0, 0, 0.34);
+  --shadow-glow: 0 0 32px rgba(124, 156, 255, 0.22);
+}
 ```
 
-Shadow:
+### Color Rules
+
+- Background should be deep dark navy/black.
+- Main panels use slightly lighter dark surfaces.
+- Use soft blue as the main action color.
+- Use green only for completed or passed states.
+- Use yellow for testing, review, or warning states.
+- Use red only for failed, blocked, or destructive states.
+- Avoid excessive neon and rainbow gradients.
+
+---
+
+## 5. Typography
+
+Use modern sans-serif fonts for UI:
 
 ```css
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+```
+
+Use monospace for code, logs, commands, hashes, and metadata:
+
+```css
+font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+```
+
+Type scale:
+
+| Role | Size | Weight |
+|---|---:|---:|
+| Hero | 56px | 700 |
+| H1 | 40px | 700 |
+| H2 | 30px | 650 |
+| H3 | 22px | 600 |
+| Body | 16px | 400 |
+| Small | 14px | 400 |
+| Caption | 12px | 500 |
+| Code | 13px | 500 |
+
+Rules:
+
+- Use short, direct headings.
+- Avoid vague marketing copy.
+- Make labels clear and technical.
+- Use monospace only where it adds meaning.
+
+---
+
+## 6. Components
+
+### Primary Button
+
+```css
+.btn-primary {
+  background: linear-gradient(180deg, #9db4ff 0%, #7c9cff 100%);
+  color: #05070d;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 650;
+  box-shadow: 0 0 28px rgba(124, 156, 255, 0.24);
+}
+```
+
+Button labels:
+
+```txt
+Start Task
+Run Tests
+Create PR
+Approve Changes
+Open Workspace
+```
+
+### Secondary Button
+
+```css
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: #f5f7fb;
+  border: 1px solid #263246;
+  border-radius: 999px;
+  padding: 12px 18px;
+}
+```
+
+### Panels / Cards
+
+```css
+.panel {
+  background: linear-gradient(180deg, #101521 0%, #0d121d 100%);
+  border: 1px solid #263246;
+  border-radius: 24px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+}
+```
+
+Use panels for:
+
+- Agent plan
+- Progress timeline
+- Code review
+- Terminal output
+- Test results
+- Knowledge cards
+- Automation cards
+
+---
+
+## 7. Status Badges
+
+Badge states:
+
+```txt
+Planning
+Running
+Editing
+Testing
+Needs Review
+Blocked
+Completed
+PR Ready
+```
+
+Rules:
+
+- Planning: blue
+- Running: purple
+- Editing: muted blue-gray
+- Testing: yellow
+- Completed: green
+- Blocked: red
+- Needs Review: yellow
+
+---
+
+## 8. Prompt Box
+
+The prompt box is the primary interaction area.
+
+```css
+.prompt-box {
+  background: #101521;
+  border: 1px solid #263246;
+  border-radius: 28px;
+  padding: 18px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
+}
+```
+
+Requirements:
+
+- Large textarea
+- Repo/context selector
+- Attachment/context button
+- Task template chips
+- Submit CTA
+- Optional success criteria field
+
+---
+
+## 9. Tool Panels
+
+### IDE Panel
+
+Looks like a compact code editor.
+
+Include:
+
+- File tabs
+- File path header
+- Line numbers
+- Changed-line indicators
+- Syntax-colored code if available
+
+### Shell Panel
+
+Looks like a real terminal.
+
+Include:
+
+- Command history
+- Running state
+- Success/failure output
+- Scrollable log area
+
+### Browser Preview Panel
+
+Use for visual QA.
+
+Include:
+
+- URL bar
+- Viewport controls
+- Preview area
+- Mobile/desktop toggle
+- QA notes
+
+---
+
+## 10. Layout Rules
+
+Desktop app shell:
+
+```txt
+Sidebar | Main Work Area | Tool Panel
+```
+
+Recommended widths:
+
+```css
+--sidebar-width: 260px;
+--tool-panel-width: 420px;
+--content-max-width: 1120px;
+```
+
+Spacing scale:
+
+```css
+--space-1: 4px;
+--space-2: 8px;
+--space-3: 12px;
+--space-4: 16px;
+--space-5: 24px;
+--space-6: 32px;
+--space-7: 48px;
+--space-8: 64px;
+--space-9: 96px;
+```
+
+Responsive behavior:
+
+- Mobile: stack panels vertically.
+- Mobile: collapse sidebar into drawer or bottom nav.
+- Mobile: show tool panels as tabs.
+- Tablet: use two-column layout when possible.
+- Desktop: use full three-column workspace.
+- Minimum touch target: 44px.
+
+---
+
+## 11. Motion
+
+Motion should communicate progress, not distract.
+
+Use:
+
+- Soft hover lift
+- Subtle focused glow
+- Progress loading states
+- Smooth tab/panel transition
+
+Avoid:
+
+- Bouncy animations
+- Excessive particles
+- Constant pulsing
+- Flashy terminal effects
+
+Recommended:
+
+```css
+transition: all 180ms ease;
 ```
 
 ---
 
-## 5. Component System
+## 12. Copywriting Rules
 
-### Buttons
+Voice:
 
-Button types:
+- Direct
+- Technical
+- Calm
+- Helpful
+- Confident
 
-- Primary
-- Secondary
-- Ghost
-- Danger
-
-Example:
-
-```html
-<button class="btn btn-primary">Support Now</button>
-<button class="btn btn-secondary">View Memberships</button>
-```
-
-### Cards
-
-Use cards for:
-
-- Creator preview
-- Membership tiers
-- Products
-- Dashboard stats
-- Supporter messages
-- Commission offers
-
-### Forms
-
-Common inputs:
-
-- Text input
-- Textarea
-- Select dropdown
-- Amount picker
-- File upload
-- Checkbox
-
-### Navigation
-
-Landing nav:
+Use copy like:
 
 ```txt
-Logo | Explore | Features | Pricing | Login | Start Page
+Plan created
+Running tests
+Review required
+PR ready
+Add context
+Open workspace
+Verify output
 ```
 
-Creator page nav:
+Avoid copy like:
 
 ```txt
-Home | Posts | Membership | Shop | Commissions | About
+Magic AI will do everything
+Replace your developers
+One-click perfect software
+Insane productivity boost
+```
+
+Completion summary format:
+
+```txt
+Completed:
+- What changed
+- Files touched
+- Tests run
+- Known limitations
+- Recommended next step
 ```
 
 ---
 
-## 6. Suggested Static Folder Structure
+## 13. Mock Engineering Data
+
+Example task:
 
 ```txt
-creator-support-site/
+Fix the PDF upload flow so large files show a clear error instead of silently failing.
+```
+
+Example plan:
+
+```txt
+1. Inspect upload handler and validation.
+2. Add visible error state.
+3. Add tests for oversized PDFs.
+4. Run lint and tests.
+5. Prepare review summary.
+```
+
+Example test output:
+
+```txt
+✓ upload validation
+✓ oversized file error state
+✓ drag-and-drop behavior
+✓ responsive layout
+```
+
+---
+
+## 14. MVP Feature List
+
+Build first:
+
+- Landing page
+- Task prompt box
+- Agent workspace mockup
+- Progress timeline
+- IDE/code panel mockup
+- Shell output panel mockup
+- Browser/test preview
+- PR review summary
+- Knowledge cards
+- Responsive layout
+
+Do not build real autonomous coding in the MVP. Start with a polished prototype using mock data.
+
+---
+
+## 15. Suggested File Structure
+
+```txt
+project/
 ├── index.html
-├── creator.html
-├── dashboard.html
-├── shop.html
-├── commissions.html
-├── success.html
+├── workspace.html
+├── review.html
+├── docs.html
 ├── css/
 │   └── style.css
 ├── js/
 │   └── app.js
-├── assets/
-│   ├── images/
-│   └── icons/
 └── README.md
 ```
 
----
-
-## 7. Suggested React Folder Structure
+React version:
 
 ```txt
 src/
 ├── components/
+│   ├── AgentTimeline.jsx
 │   ├── Button.jsx
-│   ├── Card.jsx
-│   ├── CreatorProfile.jsx
-│   ├── DonationBox.jsx
-│   ├── MembershipTier.jsx
-│   ├── ProductCard.jsx
-│   └── DashboardCard.jsx
+│   ├── CodePanel.jsx
+│   ├── PromptBox.jsx
+│   ├── PRSummary.jsx
+│   ├── ShellPanel.jsx
+│   ├── StatusBadge.jsx
+│   └── WorkspaceShell.jsx
 ├── pages/
-│   ├── Home.jsx
-│   ├── CreatorPage.jsx
-│   ├── Dashboard.jsx
-│   ├── Shop.jsx
-│   └── Commissions.jsx
+│   ├── Landing.jsx
+│   ├── Workspace.jsx
+│   ├── Review.jsx
+│   └── Documentation.jsx
 ├── data/
-│   └── mockData.js
-├── styles/
-│   └── globals.css
+│   └── mockEngineeringData.js
 └── App.jsx
 ```
 
 ---
 
-## 8. Database Concept
+## 16. Do and Do Not
 
-If you later build a backend, use tables like these.
+Do:
 
-### users
+- Make the UI feel like an engineering command center.
+- Show task status clearly.
+- Treat code, shell, browser, and tests as first-class panels.
+- Show what changed and what needs review.
+- Use realistic engineering language.
+- Make completion criteria visible.
 
-```txt
-id
-name
-email
-password_hash
-role
-created_at
-```
+Do not:
 
-### creators
-
-```txt
-id
-user_id
-username
-display_name
-bio
-avatar_url
-banner_url
-social_links
-created_at
-```
-
-### donations
-
-```txt
-id
-creator_id
-supporter_name
-supporter_email
-amount
-message
-is_anonymous
-payment_status
-created_at
-```
-
-### memberships
-
-```txt
-id
-creator_id
-tier_name
-price
-benefits
-description
-created_at
-```
-
-### products
-
-```txt
-id
-creator_id
-title
-description
-price
-file_url
-cover_image_url
-created_at
-```
-
-### commissions
-
-```txt
-id
-creator_id
-service_name
-base_price
-delivery_time
-description
-status
-created_at
-```
-
-### posts
-
-```txt
-id
-creator_id
-title
-content
-visibility
-created_at
-```
+- Copy Devin branding, logo, exact layout, exact copy, or screenshots.
+- Make the UI look like a generic chatbot.
+- Hide test results or risk notes.
+- Use excessive neon or cyberpunk styling.
+- Claim real autonomous coding exists unless implemented.
 
 ---
 
-## 9. MVP Feature List
-
-Build these first:
-
-- Landing page
-- Creator profile page
-- Donation box UI
-- Membership tier cards
-- Shop preview
-- Commission preview
-- Static dashboard mockup
-- Mobile responsive layout
-
-Do not build payment integration first. Start with UI and mock data.
-
----
-
-## 10. Advanced Feature List
-
-Build later:
-
-- Authentication
-- Real payment integration
-- Creator dashboard analytics
-- Email notifications
-- Supporter comments
-- Digital file delivery
-- Monthly subscription billing
-- Creator discovery/search
-- Admin panel
-- Custom creator themes
-- Payment webhook verification
-
----
-
-## 11. Homepage Wireframe
+## 17. Agent Build Prompt
 
 ```txt
-┌────────────────────────────────────────────┐
-│ Logo        Features  Explore  Login  CTA  │
-├────────────────────────────────────────────┤
-│                                            │
-│  Build your creator support page           │
-│  Receive tips, memberships, and sales      │
-│                                            │
-│  [Start Your Page] [Explore Creators]      │
-│                                            │
-├────────────────────────────────────────────┤
-│ Feature Cards                              │
-│ [Tips] [Memberships] [Shop] [Commissions]  │
-├────────────────────────────────────────────┤
-│ Creator Profile Preview                    │
-│ [Avatar] Name @username                    │
-│ [Support Button] [Join Membership]         │
-├────────────────────────────────────────────┤
-│ Pricing / Platform Fee                     │
-├────────────────────────────────────────────┤
-│ Final CTA                                  │
-└────────────────────────────────────────────┘
+Read design.md first.
+
+Build the UI according to this Devin-inspired AI engineering workspace design system.
+
+Requirements:
+- Dark professional developer UI
+- Agent task intake prompt box
+- Workspace with conversation, plan, timeline, IDE panel, shell panel, and browser/test preview
+- PR review summary section
+- Knowledge/documentation cards
+- Responsive layout for mobile, tablet, and desktop
+- Realistic mock engineering data
+- Do not copy Devin branding, logo, exact copy, screenshots, or layout
+- Keep the design calm, clean, technical, and trustworthy
+
+After implementation, run the project locally, check layout issues, and fix errors.
 ```
-
----
-
-## 12. Creator Page Wireframe
-
-```txt
-┌────────────────────────────────────────────┐
-│ Banner Image                               │
-├────────────────────────────────────────────┤
-│ Avatar  Creator Name                       │
-│         @username                          │
-│         Bio text here                      │
-│         [Support Now]                      │
-├────────────────────────────────────────────┤
-│ Tabs: Home | Posts | Membership | Shop     │
-├────────────────────────────────────────────┤
-│ Donation Box                               │
-│ Amount: [$3] [$5] [$10] [Custom]           │
-│ Message: [textarea]                        │
-│ [Support Creator]                          │
-├────────────────────────────────────────────┤
-│ Membership Tiers                           │
-│ [Tier Card] [Tier Card] [Tier Card]        │
-├────────────────────────────────────────────┤
-│ Recent Posts                               │
-└────────────────────────────────────────────┘
-```
-
----
-
-## 13. Dashboard Wireframe
-
-```txt
-┌────────────────────────────────────────────┐
-│ Sidebar: Overview, Posts, Shop, Settings   │
-├────────────────────────────────────────────┤
-│ Overview                                   │
-│ [Total Earnings] [Supporters] [Sales]      │
-│                                            │
-│ Recent Supporters                          │
-│ Recent Orders                              │
-│ Pending Commissions                        │
-└────────────────────────────────────────────┘
-```
-
----
-
-## 14. UI Copy Examples
-
-Landing page:
-
-```txt
-Your creative work deserves support.
-Launch a page where fans can tip, subscribe, shop, and request your work.
-```
-
-Donation box:
-
-```txt
-Send a little support.
-Your message will make this creator’s day.
-```
-
-Membership:
-
-```txt
-Join as a monthly supporter.
-Get exclusive updates while helping this creator keep building.
-```
-
-Shop:
-
-```txt
-Buy digital goods directly from the creator.
-```
-
-Commission:
-
-```txt
-Need custom work?
-Send a request and start a project.
-```
-
----
-
-## 15. Development Roadmap
-
-### Phase 1 — Static Prototype
-
-- Build HTML/CSS pages
-- Use mock creator data
-- Add responsive design
-- Add fake donation success page
-
-### Phase 2 — Interactive Frontend
-
-- Add form validation
-- Add tab navigation
-- Add localStorage mock dashboard
-- Add product filtering
-
-### Phase 3 — Backend
-
-- Add user authentication
-- Add database
-- Add creator profile editing
-- Add post publishing
-
-### Phase 4 — Payments
-
-- Add payment provider
-- Add donation checkout
-- Add product purchase flow
-- Add commission checkout
-- Add webhook verification
-
-### Phase 5 — Creator Growth Features
-
-- Analytics dashboard
-- Email updates
-- Creator discovery
-- Custom themes
-- SEO profile pages
-
----
-
-## 16. Legal / Product Notes
-
-Do not copy Ko-fi branding, name, logo, exact layout, colors, or text.
-
-It is okay to be inspired by general creator-support patterns like:
-
-- Creator profile pages
-- One-time tips
-- Memberships
-- Creator shops
-- Commission requests
-
-But your website should have its own identity, interface, wording, and user flow.
-
----
-
-## 17. First Build Task
-
-Start with only:
-
-```txt
-index.html
-style.css
-app.js
-```
-
-First version should include:
-
-- Landing hero
-- Creator profile preview
-- Donation card
-- Membership cards
-- Shop preview
-- Commission preview
-- Responsive mobile layout
-
-After that, split the project into multiple pages.
 
 ---
 
 ## 18. Final Design Principle
 
-The website should answer these questions within 10 seconds:
+The interface is successful if users can answer these questions within 10 seconds:
 
-1. Who is this creator?
-2. What do they make?
-3. How can I support them?
-4. What do I get if I support them?
-5. Can I trust this page?
+1. What task is the agent working on?
+2. What is the current status?
+3. What has changed?
+4. What tools did the agent use?
+5. Were tests or checks run?
+6. What should I review next?
 
-If users can answer those five questions quickly, the design is working.
+If these answers are obvious, the design is working.
